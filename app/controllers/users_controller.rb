@@ -28,13 +28,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    req = Cloudinary::Uploader.upload( params[:user][:image] ) if params[:user][:image]
+    cloudinary = Cloudinary::Uploader.upload params[:file]
 
     user = User.find params[:id]
-    user.image = req["url"] if req
+    user.image = cloudinary["url"] if cloudinary
 
-    user.update user_params
-    # if user.authenticate( params[:user][:password] )
+    user.update user_params if user.authenticate( params[:user][:password] )
 
     redirect_to user
   end
@@ -48,6 +47,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :username, :name, :password, :password_confirmation)
+    params.require(:user).permit(:email, :username, :image, :name, :password, :password_confirmation)
   end
 end
