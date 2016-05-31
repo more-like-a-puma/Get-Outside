@@ -5,3 +5,30 @@
 .field_with_errors input {
   border: 1px solid red;
 }
+
+.homepage {
+  display: flex;
+  background-color: #152303;
+}
+
+.homepage h1, h2, h3 {
+  display: flex;
+  text-align: center;
+}
+
+.homepage h1 {
+  font-family: 'Neucha', cursive;
+  color: #f4f2f2;
+}
+
+.homepage h2 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  color: gainsboro;
+}
+
+.homepage h3, p {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+  color: #f4f2f2;
+}

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "session#new"
+  root "users#home"
   get 'session/new'
 
   resources :users
