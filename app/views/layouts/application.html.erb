@@ -9,12 +9,10 @@
 <body>
 
   <nav>
-    <%= link_to "G.O. getters", users_path %> |
+    <%= link_to "G.O. Getters", users_path %> |
     <% if @current_user %>
-      <%= link_to "View Profile", @current_user %> |
+      <%= link_to "Your Profile", @current_user %> |
       <%= link_to "Destinations", destinations_path %> |
-      <%= link_to "Edit Profile", edit_user_path(@current_user) %> |
-      <%= link_to "Delete Account", user_path(@current_user), :method => :delete %> |
       <%= link_to "Log out", logout_path, :method => :delete %>
     <% else %>
       <%= link_to "Create Account", new_user_path %> |
