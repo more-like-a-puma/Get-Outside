@@ -24,16 +24,26 @@
 .homepage h1 {
   font-family: 'Neucha', cursive;
   color: #f4f2f2;
+  font-size: 80px;
 }
 
 .homepage h2 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
+  font-size: 75px;
   color: gainsboro;
+}
+
+.homepage h3 {
+  font-size: 70px;
 }
 
 .homepage h3, ul {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 400;
   color: #f4f2f2;
+}
+
+.homepage ul {
+  padding: 30px;
 }
