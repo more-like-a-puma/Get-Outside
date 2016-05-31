@@ -22,21 +22,24 @@
 }
 
 .homepage h1 {
-  font-family: 'Neucha', cursive;
+  font-family: 'Amatic SC', cursive;
   color: #f4f2f2;
   font-size: 80px;
-  padding-top: 20px;
+  margin: 10px;
 }
 
 .homepage h2 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   font-size: 60px;
+  margin: 10px;
   color: gainsboro;
 }
 
 .homepage h3 {
+  font-family: 'Neucha', cursive;
   font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .homepage h3, ul {
