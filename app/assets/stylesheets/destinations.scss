@@ -1,3 +1,74 @@
 // Place all the styles related to the Destinations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+p {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  color: #C9C9C9;
+}
+
+h1, h2, h3 {
+  font-family: 'Amatic SC', cursive;
+  color: #f4f2f2;
+}
+
+a {
+  position: relative;
+  color: #f4f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Amatic SC', cursive;
+  padding: 20px;
+}
+
+.destination_form {
+  padding: 20px;
+}
+
+.destination_form label {
+  padding-right: 8px;
+}
+
+.searchbar {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  flex: 1;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 25px;
+}
+
+.country_list {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #f4f2f2;
+  display: list-item;
+  padding: 20px;
+}
+
+.edit_title {
+  padding: 20px;
+  font-size: 40px;
+}
+
+.edit_title h2 {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+}
+
+.country_list a {
+  font-family: 'PT Sans Narrow', sans-serif;
+  flex: 1;
+  position: relative;
+  color: #f4f2f2;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.single_destination {
+  padding: 20px;
+}
