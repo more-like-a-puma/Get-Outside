@@ -1,9 +1,11 @@
 class DestinationsController < ApplicationController
   def index
     if params[:search].present?
-      @destinations = Destination.near(params[:search])
+      @destinations = Destination.near(params[:search]).group_by { |d| d.country }
+      # [destination1, destination2]
     else
       @destinations = Destination.all.group_by { |d| d.country }
+      # { "Australia" => [destination1, destination2] }
     end
   end
 

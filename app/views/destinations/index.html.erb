@@ -6,7 +6,7 @@
 
 <% @destinations.each do |key, value| %>
   <h1><%= key %></h1>
-  <% value.each do |v| %>
-    <p><%= link_to(v.title, destination_path(v)) %></p>
-  <% end %>
+    <% value.each do |v| %>
+      <p><%= link_to(v.title, destination_path(v)) %></p>
+    <% end %>
 <% end %>
