@@ -9,7 +9,7 @@
   <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@destination.latitude},#{@destination.longitude}" %></p>
 
   <div class="nearby_list">
-    <% @destination.nearbys(30).each do |location| %>
+    <% when @destination.nearbys(30).each do |location| %>
       <h3>Destinations nearby: </h3>
       <li><%= link_to location.title, location %> (<%= @destination.distance_to(location).round(2) %> miles)</li>
     <% end %>
