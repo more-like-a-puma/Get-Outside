@@ -1,11 +1,13 @@
-<h2>Profile</h2>
+<div class="user_profile">
+  <h2>Your Account</h2>
 
-<p><%= image_tag(@user.image) %></p>
-<p>Username: <%= @user.username %></p>
-<p>Name: <%= @user.name %></p>
-<p>Email: <%= @user.email %></p>
+  <p><%= image_tag(@user.image) %></p>
+  <p>Username: <%= @user.username %></p>
+  <p>Name: <%= @user.name %></p>
+  <p>Email: <%= @user.email %></p>
+</div>
 
-
-
-<%= link_to( "Edit Profile", edit_user_path(@user) ) %>
-<%= link_to( "Delete Profile", user_path(@user), :method => :delete ) %>
+<div class="bottom_user_links">
+  <%= link_to( "Edit Profile", edit_user_path(@user) ) %>
+  <%= link_to( "Delete Profile", user_path(@user), :method => :delete ) %>
+</div>
