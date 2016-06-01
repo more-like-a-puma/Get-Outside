@@ -14,11 +14,20 @@
  *= require_self
  */
 
+ body {
+   margin: 0px;
+ }
+
  nav {
   font-family: 'Neucha', cursive;
   background-color: #090F01;
+  overflow: auto;
   font-size: 16px;
  }
+
+nav ul {
+  overflow: auto;
+}
 
 nav ul li {
   float: left;
@@ -40,4 +49,12 @@ nav ul li a:hover {
   float: right;
   font-size: 14px;
   color: #C9C9C9;
+  padding: 9px 20px;
+}
+
+.bottom_nav {
+  float: right;
+  color: #C9C9C9;
+  font-size: 14px;
+  padding: 0px 20px;
 }

@@ -12,20 +12,20 @@
   <nav>
     <ul>
       <li><%= link_to "Home", root_path %> </li>
-      <% if @current_user %>
-        <li><%= link_to "Your Profile", @current_user %></li>
-        <li><%= link_to "Destinations", destinations_path %> </li>
-        <li><%= link_to "Log out", logout_path, :method => :delete %></li>
-      <% else %>
-        <li><%= link_to "Create Account", new_user_path %></li>
-        <li><%= link_to "Login", login_path %></li>
-      <% end %>
+        <% if @current_user %>
+          <li><%= link_to "Your Profile", @current_user %></li>
+          <li><%= link_to "Destinations", destinations_path %> </li>
+          <li><%= link_to "Log out", logout_path, :method => :delete %></li>
+        <% else %>
+          <li><%= link_to "Create Account", new_user_path %></li>
+          <li><%= link_to "Login", login_path %></li>
+        <% end %>
+      <li class="sign_in">
+        <% if @current_user %>
+          Signed in as <%= @current_user.username %>
+        <% end %>
+      </li>
     </ul>
-    <div class="sign_in">
-      <% if @current_user %>
-        <p>Signed in as <%= @current_user.username %></p>
-      <% end %>
-    </div>
     <div class="bottom_nav">
       <% if flash[:success] %>
         <p><%= flash[:success] %></p>
