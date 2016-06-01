@@ -1,2 +1,12 @@
 <h1>Destinations#index</h1>
 <p>Find me in app/views/destinations/index.html.erb</p>
+
+<%= form_tag '/destinations', :method => :get do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "Search Nearby"%>
+<% end %>
+
+<h1><%= @destination.country %></h1>
+<% @destination.nearbys(20).each do |locations| %>
+  <li><%= link_to destination.address, locations %> (<%= destination.distance.round(2) %> miles)</li>
+<% end %>
