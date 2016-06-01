@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    cloudinary = Cloudinary::Uploader.upload params[:file]
+    cloudinary = Cloudinary::Uploader.upload params[:file], :angle => :exif
 
     @user = User.new user_params
     @user.image = cloudinary["url"]
@@ -28,12 +28,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    cloudinary = Cloudinary::Uploader.upload params[:file]
+    cloudinary = Cloudinary::Uploader.upload params[:file], :angle => :exif
 
     user = User.find params[:id]
     user.image = cloudinary["url"] if cloudinary
 
-    user.update user_params if user.authenticate( params[:username][:password] )
+    user.update user_params if user.authenticate( params[:user][:password] )
 
     redirect_to user
   end

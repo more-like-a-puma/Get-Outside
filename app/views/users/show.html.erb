@@ -1,6 +1,6 @@
 <h2>Profile</h2>
 
-<p><img src=<%= @user.image %>></p>
+<p><%= image_tag(@user.image) %></p>
 <p>Username: <%= @user.username %></p>
 <p>Name: <%= @user.name %></p>
 <p>Email: <%= @user.email %></p>
