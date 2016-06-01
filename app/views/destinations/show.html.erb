@@ -7,8 +7,8 @@
 <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@destination.latitude},#{@destination.longitude}" %></p>
 <p>Description: <%= @destination.description %></p>
 
-<% @destination.nearbys(10).each do |locations| %>
-  <li><%= link_to destination.address, locations %> (<%= destination.distance.round(2) %> miles)</li>
+<% @destination.nearbys(30).each do |location| %>
+  <li><%= link_to location.title, location %> (<%= @destination.distance_to(location).round(2) %> miles)</li>
 <% end %>
 
 
