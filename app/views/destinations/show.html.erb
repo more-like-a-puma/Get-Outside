@@ -16,5 +16,7 @@
   </div>
 </div>
 
-<%= link_to( "Edit Destination", edit_destination_path(@destination) ) %>
-<%= link_to( "Delete Destination", destination_path(@destination), :method => :delete ) %>
+<div class="bottom_destination_links">
+  <%= link_to( "Edit Destination", edit_destination_path(@destination) ) %>
+  <%= link_to( "Delete Destination", destination_path(@destination), :method => :delete ) %>
+</div>
