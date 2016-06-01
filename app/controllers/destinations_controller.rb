@@ -28,12 +28,14 @@ class DestinationsController < ApplicationController
   end
 
   def update
+    @user = User.find params[:id]
+
     cloudinary = Cloudinary::Uploader.upload params[:file]
 
     destination = Destionation.find params[:id]
-    user.image = cloudinary["url"] if cloudinary
+    destination.image = cloudinary["url"] if cloudinary
 
-    destination.update destination_params if user.authenticate( params[:user][:password] )
+    destination.update destination_params if @user.authenticate( params[:username][:password] )
 
     redirect_to destination
   end

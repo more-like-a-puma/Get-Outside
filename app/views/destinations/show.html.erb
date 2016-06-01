@@ -1,2 +1,12 @@
-<h1>Destinations#show</h1>
-<p>Find me in app/views/destinations/show.html.erb</p>
+<h2><%= @destination.title %></h2>
+
+<p><img src=<%= @destination.image %>></p>
+<p>Address: <%= @destination.address %></p>
+<p>Country: <%= @destination.country %></p>
+<p>Terrain: <%= @destination.terrain %></p>
+<p>Description: <%= @destination.description %></p>
+
+
+
+<%= link_to( "Edit Destination", edit_user_path(@destination) ) %>
+<%= link_to( "Delete Destination", user_path(@destination), :method => :delete ) %>

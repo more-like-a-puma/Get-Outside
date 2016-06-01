@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     user = User.find params[:id]
     user.image = cloudinary["url"] if cloudinary
 
-    user.update user_params if user.authenticate( params[:user][:password] )
+    user.update user_params if user.authenticate( params[:username][:password] )
 
     redirect_to user
   end
