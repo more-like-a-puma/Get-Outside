@@ -12,6 +12,7 @@
     <% when @destination.nearbys(30).each do |location| %>
       <h3>Destinations nearby: </h3>
       <li><%= link_to location.title, location %> (<%= @destination.distance_to(location).round(2) %> miles)</li>
+      <% end %>
     <% end %>
   </div>
 </div>
