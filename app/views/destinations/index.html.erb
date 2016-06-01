@@ -7,7 +7,7 @@
 <% @destinations.each do |key, value| %>
   <h1><%= key %></h1>
   <% value.each do |v| %>
-    <p><%= v.title %></p>
+    <p><% link_to(v.title, destination_path(v)) %></p>
   <% end %>
   <!-- this is where you will display your group_by -->
 
