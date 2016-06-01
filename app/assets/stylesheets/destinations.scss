@@ -12,6 +12,10 @@ h1, h2, h3 {
   color: #f4f2f2;
 }
 
+.title_new_destination {
+  margin-left: 20px;
+}
+
 a {
   position: relative;
   color: #f4f2f2;
@@ -72,6 +76,11 @@ h1 {
 
 .single_destination {
   padding: 20px;
+}
+
+.single_destination img {
+  max-width: 45vw;
+  max-height: 400px;
 }
 
 .nearby_list h3 {

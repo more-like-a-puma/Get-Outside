@@ -45,8 +45,8 @@
   margin: 10px;
   margin-top: 0px;
   vertical-align: text-top;
-  color: #c9c9c9;
-  border-bottom: 1px solid #c9c9c9;
+  color: #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
 }
 
 .homepage h3 {
@@ -78,4 +78,22 @@
 
 .user_profile {
   padding: 20px;
+}
+
+.user_profile img {
+  max-width: 45vw;
+  max-height: 400px;
+}
+
+.user_form {
+  padding: 20px;
+}
+
+.user_form label {
+  padding-right: 8px;
+}
+
+.edit_profile_title h1 {
+  margin-left: 20px;
+  margin-bottom: 0px;
 }
