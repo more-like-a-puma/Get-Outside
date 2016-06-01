@@ -1,0 +1,28 @@
+<%= form_for @destination, :html => { :multipart => true } do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+  </p>
+  <p>
+    <%= f.label :address %>
+    <%= f.text_field :address, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= cl_image_upload_tag :image, :required => true %>
+  </p>
+  <p>
+    <%= f.label :terrain %>
+    <%= f.text_field :terrain, :required => true %>
+  </p>
+  <p>
+    <%= f.label :country %>
+    <%= f.text_field :country, :required => true %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description, :required => true %>
+  </p>
+
+  <%= f.submit "Go on" %>
+<% end %>

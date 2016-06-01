@@ -7,7 +7,11 @@
 <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@destination.latitude},#{@destination.longitude}" %></p>
 <p>Description: <%= @destination.description %></p>
 
+<% @destination.nearbys(10).each do |locations| %>
+  <li><%= link_to destination.address, locations %> (<%= destination.distance.round(2) %> miles)</li>
+<% end %>
 
 
-<%= link_to( "Edit Destination", edit_user_path(@destination) ) %>
-<%= link_to( "Delete Destination", user_path(@destination), :method => :delete ) %>
+
+<%= link_to( "Edit Destination", edit_destination_path(@destination) ) %>
+<%= link_to( "Delete Destination", destination_path(@destination), :method => :delete ) %>

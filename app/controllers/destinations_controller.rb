@@ -3,7 +3,7 @@ class DestinationsController < ApplicationController
     if params[:search].present?
       @destinations = Destination.near(params[:search])
     else
-      @destinations = Destination.all
+      @destinations = Destination.all.group_by { |d| d.country }
     end
   end
 
