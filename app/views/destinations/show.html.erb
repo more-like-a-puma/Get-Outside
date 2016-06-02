@@ -21,7 +21,13 @@
 </div>
 
 <!-- @destination.activity.each.do -->
-
+<div class="activities_at_place">
+  <% unless @destination.activities.nil? %>
+    <% @destination.activities.each do |s| %>
+      <li><%= link_to s.title, s %></li>
+    <% end %>
+  <% end %>
+</div>
 
 
 

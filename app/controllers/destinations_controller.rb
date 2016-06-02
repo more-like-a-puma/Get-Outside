@@ -11,6 +11,7 @@ class DestinationsController < ApplicationController
 
   def new
     @destination = Destination.new
+    @activities = Activity.all
   end
 
   def create
@@ -34,6 +35,7 @@ class DestinationsController < ApplicationController
 
   def edit
     @destination = Destination.find params[:id]
+    @activities = Activity.all
   end
 
   def update
@@ -58,6 +60,6 @@ class DestinationsController < ApplicationController
 
   private
   def destination_params
-    params.require(:destination).permit(:address, :country, :image, :title, :description, :terrain)
+    params.require(:destination).permit(:address, :country, :image, :title, :description, :terrain, :user_id, :activity_id)
   end
 end
