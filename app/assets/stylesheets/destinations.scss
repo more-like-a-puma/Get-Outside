@@ -115,3 +115,34 @@ h1 {
 .destinations_all a:hover {
   color: #BF5A28;
 }
+
+.do_make_pretty_activity {
+  width: 45%;
+  float: right;
+}
+
+.activities_at_place {
+  padding: 20px;
+  text-align: center;
+}
+
+.activities_at_place li {
+  list-style-type: none;
+  padding: 8px;
+}
+
+.activities_at_place a {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+.activities_at_place a:hover {
+  color: #BF5A28;
+  font-size: 35px;
+}
+
+.make_pretty_big_show {
+  float: left;
+  width: 45%;
+}
