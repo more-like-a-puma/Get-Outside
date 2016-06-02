@@ -1,28 +1,14 @@
-== README
+== GET OUTSIDE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Get Outside is a user generated database. It's purpose is to assist a user with information about destinations and activities that they can do there.
 
-Things you may want to cover:
+It uses:
 
-* Ruby version
+* Ruby version = 2.3.1
 
-* System dependencies
+* Postgresql version = 0.15
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Background images are all courtesy of https://unsplash.com
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+In the future I do plan to add in a weather api on the destination show pages as well as user reviews. 
