@@ -16,11 +16,18 @@ class DestinationsController < ApplicationController
 
   def create
     @destination = Destination.new destination_params
-    @activity = Activity.new activity_params
 
     unless params[:file].nil?
       cloudinary = Cloudinary::Uploader.upload params[:file]
       @destination.image = cloudinary["url"]
+    end
+
+    params[:destination][:activity_ids].shift
+    activity_ids = params[:destination][:activity_ids]
+
+    activity_ids.each do |a|
+      x = Activity.find a
+      @destination.activities << x unless @destination.activities.include? x
     end
 
     if @destination.save
@@ -32,6 +39,7 @@ class DestinationsController < ApplicationController
 
   def show
     @destination = Destination.find params[:id]
+    @activities = Activity.all
   end
 
   def edit
@@ -41,16 +49,26 @@ class DestinationsController < ApplicationController
 
   def update
     @destination = Destination.find params[:id]
-    @activities = Activity.all
+
+    @destination.activities.delete_all
+
+    params[:destination][:activity_ids].shift
+    activity_ids = params[:destination][:activity_ids]
+
+    activity_ids.each do |a|
+      x = Activity.find a
+      @destination.activities << x unless @destination.activities.include? x
+    end
 
     cloudinary = Cloudinary::Uploader.upload params[:file] if params[:file]
 
-    destination = Destination.find params[:id]
-    destination.image = cloudinary["url"] if cloudinary
+    # destination = Destination.find params[:id]
+    @destination.image = cloudinary["url"] if cloudinary
 
-    destination.update destination_params
+    @destination.update destination_params
 
-    redirect_to destination
+
+    redirect_to @destination
   end
 
   def destroy
@@ -62,6 +80,6 @@ class DestinationsController < ApplicationController
 
   private
   def destination_params
-    params.require(:destination).permit(:address, :country, :image, :title, :description, :terrain, :user_id, :activity_id)
+    params.require(:destination).permit(:address, :country, :image, :title, :description, :terrain, :user_id, :activity_id, :activity_ids)
   end
 end
