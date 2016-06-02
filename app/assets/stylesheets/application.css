@@ -22,12 +22,12 @@
  nav {
   font-family: 'Neucha', cursive;
   background-color: #090F01;
-  overflow: auto;
+  overflow: hidden;
   font-size: 16px;
  }
 
 nav ul {
-  overflow: auto;
+  overflow: hidden;
 }
 
 nav ul li {
