@@ -14,10 +14,13 @@ class DestinationsController < ApplicationController
   end
 
   def create
-    cloudinary = Cloudinary::Uploader.upload params[:file]
-
     @destination = Destination.new destination_params
-    @destination.image = cloudinary["url"]
+
+    unless params[:file].nil?
+      cloudinary = Cloudinary::Uploader.upload params[:file]
+      @destination.image = cloudinary["url"]
+    end
+
     if @destination.save
       redirect_to destinations_path
     else
@@ -36,7 +39,7 @@ class DestinationsController < ApplicationController
   def update
     @destination = Destination.find params[:id]
 
-    cloudinary = Cloudinary::Uploader.upload params[:file]
+    cloudinary = Cloudinary::Uploader.upload params[:file] if params[:file]
 
     destination = Destination.find params[:id]
     destination.image = cloudinary["url"] if cloudinary
