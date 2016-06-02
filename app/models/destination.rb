@@ -18,4 +18,6 @@
 class Destination < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
+  has_and_belongs_to_many :activities
+  has_and_belongs_to_many :users
 end

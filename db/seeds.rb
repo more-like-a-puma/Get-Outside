@@ -9,3 +9,11 @@ Activity.destroy_all
 climbing = Activity.create :title => 'Rock Climbing', :equipment_list => 'Harness, ropes, carabiners, chalk, climbing shoes', :description => 'Explore the great outdoors vertically. Scale mountain face\'s.'
 surfing = Activity.create :title => 'Surfing', :equipment_list => 'Surfboard, wetsuit', :description => 'Let the motion of the ocean push you around at great speed.'
 hiking = Activity.create :title => 'Hiking', :equipment_list => 'Hiking boots, appropriate clothing, compass', :description => 'Walk along mountain trails, forests & jungles to explore the world outside.'
+
+morelikeapuma.destinations << bondibeach << bluemountains
+
+morelikeapuma.activities << surfing << climbing
+
+bondibeach.activities << surfing
+
+bluemountains.activities << climbing << hiking
