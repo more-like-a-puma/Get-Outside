@@ -16,7 +16,7 @@ class DestinationsController < ApplicationController
 
   def create
     @destination = Destination.new destination_params
-    @activities = Activity.all
+    @activity = Activity.new activity_params
 
     unless params[:file].nil?
       cloudinary = Cloudinary::Uploader.upload params[:file]
