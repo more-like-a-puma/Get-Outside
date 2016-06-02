@@ -107,3 +107,11 @@ h1 {
   background-size: cover;
   height: 100vh;
 }
+
+.destinations_all a {
+  transition: all 0.5s;
+}
+
+.destinations_all a:hover {
+  color: #BF5A28;
+}
