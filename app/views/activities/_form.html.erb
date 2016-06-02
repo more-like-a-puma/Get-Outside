@@ -1,2 +1,22 @@
-<h1>Activities#_form</h1>
-<p>Find me in app/views/activities/_form.html.erb</p>
+<div class="activity_form">
+  <%= form_for @activity, :html => { :multipart => true } do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title, :required => true %>
+    </p>
+    <p>
+      <%= f.label :image %>
+      <%= cl_image_upload_tag :image, :required => true %>
+    </p>
+    <p>
+      <%= f.label :equipment_list, "Equipment Needed" %>
+      <%= f.text_field :equipment_list, :required => true %>
+    </p>
+    <p>
+      <%= f.label :description %>
+      <%= f.text_field :description, :required => true %>
+    </p>
+    
+    <%= f.submit "Go on" %>
+  <% end %>
+</div>

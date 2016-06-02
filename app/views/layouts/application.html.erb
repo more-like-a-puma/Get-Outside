@@ -14,8 +14,10 @@
       <li><%= link_to "Home", root_path %> </li>
         <% if @current_user %>
           <li><%= link_to "Your Profile", @current_user %></li>
-          <li><%= link_to "Destinations", destinations_path %> </li>
+          <li><%= link_to "Destinations", destinations_path %></li>
           <li><%= link_to "Create A Destination", new_destination_path %></li>
+          <li><%= link_to "Activities", activities_path %></li>
+          <li><%= link_to "Create An Activity", new_activity_path %></li>
           <li><%= link_to "Log out", logout_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to "Create Account", new_user_path %></li>

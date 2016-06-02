@@ -1,3 +1,43 @@
 // Place all the styles related to the Activities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.activity_list {
+  padding: 20px;
+  background: url("https://images.unsplash.com/uploads/1411589183965bdf6e141/5f468e98?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=24ce341bd441a2adccb6de5380a3e8b9");
+  background-size: cover;
+  height: 100vh;
+}
+
+.activity_list a {
+  transition: all 0.5s;
+}
+
+.activity_list a:hover {
+  color: #BF5A28;
+}
+
+.single_activity {
+  padding: 20px;
+}
+
+.edit_title {
+  padding: 20px;
+  font-size: 40px;
+}
+
+.edit_title h2 {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.activity_form {
+  padding: 20px;
+}
+
+.activity_form label {
+  padding-right: 8px;
+}
+
+.title_new_activity {
+  margin-left: 20px;
+}
