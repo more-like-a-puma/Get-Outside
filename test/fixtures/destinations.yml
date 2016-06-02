@@ -11,6 +11,8 @@
 #  title       :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  longitude   :float
+#  latitude    :float
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
