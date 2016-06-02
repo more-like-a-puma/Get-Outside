@@ -30,6 +30,8 @@
         <% x = [a.title, a.id] %>
         <% activity_arr.push x %>
       <% end %>
+      Activities
+      <br>
       <%= f.select( :activity_ids, activity_arr, {}, {:multiple => true} ) %>
     </p>
 
